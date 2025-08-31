@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-primary-400 mb-4">WeddingLens</h3>
             <p className="text-gray-300 mb-4 max-w-md">
-              Bangladesh's premier marketplace for photography equipment rental and verified wedding photographer discovery. 
+              Bangladesh&apos;s premier marketplace for photography equipment rental and verified wedding photographer discovery. 
               Connecting photographers, building trust, creating memories.
             </p>
             <div className="flex space-x-4">

@@ -300,7 +300,7 @@ export default function HowItWorksPage() {
                   : 'text-gray-600 hover:text-primary-600'
               }`}
             >
-              👰 I'm a Photographer
+              👰 I&apos;m a Photographer
             </button>
           </div>
         </div>
