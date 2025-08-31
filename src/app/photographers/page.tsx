@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Photographers() {
   const [filters, setFilters] = useState({
@@ -207,8 +208,14 @@ export default function Photographers() {
                   <div className="p-6">
                     <div className="flex flex-col md:flex-row md:items-start space-y-4 md:space-y-0 md:space-x-6">
                       {/* Profile Image */}
-                      <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-3xl">👨‍💼</span>
+                      <div className="w-24 h-24 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                        <Image 
+                          src="/photographer.png" 
+                          alt="Photographer avatar"
+                          width={96}
+                          height={96}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
 
                       {/* Photographer Info */}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function TopPhotographers() {
   const photographers = [
@@ -99,8 +100,14 @@ export default function TopPhotographers() {
             <div key={photographer.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow border">
               <div className="p-6">
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">👨‍💼</span>
+                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+                    <Image 
+                      src="/photographer.png" 
+                      alt="Photographer avatar"
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center">

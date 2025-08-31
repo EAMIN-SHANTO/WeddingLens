@@ -1,34 +1,36 @@
+import Image from 'next/image';
+
 export default function HowItWorks() {
   const steps = [
     {
       step: 1,
       title: "Create Your Profile",
       description: "Sign up as a photographer or renter. Upload your NID for verification and build your portfolio.",
-      icon: "👤"
+      icon: "/1.png"
     },
     {
       step: 2,
       title: "Browse & Book",
       description: "Find equipment or photographers in your area. Check availability and make secure bookings.",
-      icon: "🔍"
+      icon: "/2.png"
     },
     {
       step: 3,
       title: "Secure Payment",
       description: "Pay safely through our integrated gateway with card, bKash, or bank transfer. Funds held in escrow.",
-      icon: "💳"
+      icon: "/3.png"
     },
     {
       step: 4,
       title: "Meet & Create",
       description: "Meet up, exchange equipment or start your photoshoot. Create amazing memories together.",
-      icon: "📸"
+      icon: "/4.png"
     },
     {
       step: 5,
       title: "Rate & Review",
       description: "Leave honest reviews to help build trust in our community of verified photographers.",
-      icon: "⭐"
+      icon: "/5.png"
     }
   ];
 
@@ -47,8 +49,14 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {steps.map((step) => (
             <div key={step.step} className="text-center">
-              <div className="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 text-3xl">
-                {step.icon}
+              <div className="bg-primary-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 p-4">
+                <Image
+                  src={step.icon}
+                  alt={`Step ${step.step}: ${step.title}`}
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-contain"
+                />
               </div>
               <div className="bg-primary-600 text-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-4 font-bold">
                 {step.step}
